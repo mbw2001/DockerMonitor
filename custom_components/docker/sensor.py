@@ -85,7 +85,7 @@ class DockerHostSensor(Entity):
     @property
     def name(self):
         """Return the name of the sensor."""
-        return "Docker {} {}".format(self._clientname, self._var_name)
+        return "{} {}".format(self._clientname, self._var_name)
 
     @property
     def icon(self):
@@ -171,7 +171,7 @@ class DockerContainerSensor(Entity):
     @property
     def name(self):
         """Return the name of the sensor, if any."""
-        return "{} {} {}".format(self._clientname, self._container_name, self._var_name)
+        return "{} {}".format(self._container_name.title(), self._var_name)
 
     @property
     def icon(self):
@@ -222,7 +222,7 @@ class DockerContainerSensor(Entity):
             "identifiers": {
                 (DOMAIN, self._clientname, self._container_name)
             },
-            "name": "{}_{}".format(self._clientname, self._container_name),
+            "name": self._container_name.title(),
             "manufacturer": "Docker",
             "model": "Container",
             "sw_version": self.hass.data[DOCKER_CLIENT][DATA_VERSION_INFO]["version"]

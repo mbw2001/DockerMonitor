@@ -158,10 +158,7 @@ class DockerHost:
         async_dispatcher_send(self.hass, DATA_UPDATED)
 
     def get_container(self, name):
-        container = None
-        if name in self.containers:
-            container = self.containers[name]
-        return container
+        return self.containers.get(name, None)
 
 class DockerContainer:
     def __init__(self, hass, hostApi, name):

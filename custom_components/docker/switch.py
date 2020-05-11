@@ -58,7 +58,7 @@ class ContainerSwitch(SwitchDevice):
     @property
     def name(self):
         """Return the name of the sensor."""
-        return "Docker {} {}".format(self._clientname, self._container_name)
+        return self._container_name.title()
 
     @property
     def icon(self):
@@ -89,7 +89,7 @@ class ContainerSwitch(SwitchDevice):
             "identifiers": {
                 (DOMAIN, self._clientname, self._container_name)
             },
-            "name": "{}_{}".format(self._clientname, self._container_name),
+            "name": self._container_name.title(),
             "manufacturer": "Docker",
             "model": "Container",
             "sw_version": self.hass.data[DOCKER_CLIENT][DATA_VERSION_INFO]["version"]
