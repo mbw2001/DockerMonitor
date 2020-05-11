@@ -1,0 +1,8 @@
+{
+    "domain": "docker",
+    "name": "Docker Monitor",
+    "documentation": "https://www.docker.com",
+    "codeowners": ["@mbw2001"],
+    "requirements": ["docker==3.7.0", "python-dateutil==2.7.5"],
+    "config_flow": true
+  }

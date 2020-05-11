@@ -1,0 +1,38 @@
+{
+  "config": {
+    "title": "Docker Monitor",
+    "step": {
+      "user": {
+        "title": "Connect to Docker",
+        "description": "Set up your Home Assistant integrate with Docker.",
+        "data": {
+          "name": "Name of Docker Host",
+          "host": "Socket, Hostname or IP address",
+          "monitored_conditions": "Monitored conditions (leave blank for all)",
+          "create_sensors": "Create sensors"
+        }
+      },
+      "confirm": {
+        "title": "Docker Monitor",
+        "description": "Do you want to set up Docker?"
+      }
+    },
+    "error": {
+      "connection_error": "Failed to connect to Docker host."
+    },
+    "abort": {
+      "already_configured": "This Docker host is already configured.",
+      "connection_error": "Failed to connect to Docker host."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "description": "Configure options for Docker",
+        "data": { 
+          "scan_interval": "Update frequency" 
+        }
+      }
+    }
+  }
+}
