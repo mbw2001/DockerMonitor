@@ -80,12 +80,12 @@ class DockerHostSensor(Entity):
     @property
     def unique_id(self) -> str:
         """Return the unique ID for this sensor."""
-        return "{}_{}".format(self._clientname, self._var_name)
+        return "docker_{}_{}".format(self._clientname, self._var_name)
 
     @property
     def name(self):
         """Return the name of the sensor."""
-        return "{} {}".format(self._clientname, self._var_name)
+        return "Docker {} {}".format(self._clientname, self._var_name)
 
     @property
     def icon(self):
