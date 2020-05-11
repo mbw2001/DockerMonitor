@@ -17,4 +17,4 @@ Best installed using [HACS](https://github.com/custom-components/hacs) by adding
 ## Configuration:
 Integration is configured through the integrations UI.
 
-<a href="https://www.buymeacoffee.com/mbw2001" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/arial-blue.png" alt="Buy Me A Coffee" style="height: 51px !important;width: 217px !important;" ></a>
+[![Buy Me A Coffee](https://cdn.buymeacoffee.com/buttons/arial-blue.png =217x51)](https://www.buymeacoffee.com/mbw2001)
