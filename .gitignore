@@ -1,0 +1,9 @@
+__pycache__/
+deps/
+tts/
+.*
+*.yaml
+*.log
+*.conf
+*.db
+!.gitignore
