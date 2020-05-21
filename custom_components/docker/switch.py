@@ -8,7 +8,7 @@ from homeassistant.config_entries import ConfigEntry
 from homeassistant.helpers.entity import Entity
 from homeassistant.helpers.typing import HomeAssistantType
 from homeassistant.helpers.dispatcher import async_dispatcher_connect
-from homeassistant.components.switch import SwitchDevice
+from homeassistant.components.switch import SwitchEntity
 
 from .const import (
     DOMAIN,
@@ -39,7 +39,7 @@ async def async_setup_entry(
         _LOGGER.info("No containers setup")
         return False
 
-class ContainerSwitch(SwitchDevice):
+class ContainerSwitch(SwitchEntity):
     def __init__(self, hass, api, clientname, container_name):
         self._hass = hass
         self._api = api
